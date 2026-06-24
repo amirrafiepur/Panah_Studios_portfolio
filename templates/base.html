@@ -1,0 +1,78 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}Panah Studios{% endblock %}</title>
+  <meta name="description" content="{% block meta_description %}Panah Studios — custom Django web development. Faster, safer, and built to last longer than off-the-shelf platforms.{% endblock %}">
+
+  <!-- Preconnect for font performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Panah Studios — home">
+        <span class="logo-mark">~/</span>panah&nbsp;studios
+      </a>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <a href="/#work" class="nav-link"><span class="nav-bracket">~/</span>work</a>
+        <a href="/#django-vs-wordpress" class="nav-link"><span class="nav-bracket">~/</span>why&nbsp;django</a>
+        <a href="/contact/" class="nav-link nav-cta"><span class="nav-bracket">$</span>contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <p class="footer-logo"><span class="logo-mark">~/</span>panah&nbsp;studios</p>
+        <p class="footer-tagline">// custom-built Django websites</p>
+      </div>
+
+      <div class="footer-contact">
+        <p class="footer-label">// get in touch</p>
+        <a class="footer-link" href="tel:09113914457">0911&nbsp;391&nbsp;4457</a>
+        <a class="footer-link" href="mailto:nobody76911@gmail.com">nobody76911@gmail.com</a>
+        <!-- TODO(Amir): add Instagram handle here when ready, e.g.
+        <a class="footer-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a>
+        -->
+      </div>
+
+      <div class="footer-nav">
+        <p class="footer-label">// sitemap</p>
+        <a class="footer-link" href="/#work">Work</a>
+        <a class="footer-link" href="/#django-vs-wordpress">Why Django</a>
+        <a class="footer-link" href="/contact/">Contact</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {% now "Y" %} Panah Studios. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="{% static 'js/main.js' %}" defer></script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

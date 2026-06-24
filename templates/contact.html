@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact — Panah Studios{% endblock %}
+
+{% block content %}
+
+  <section class="contact-hero">
+    <div class="contact-hero-inner">
+
+      <div class="contact-photo-wrap reveal">
+        <img
+          class="contact-photo"
+          src="{% static 'images/contact-profile.jpg' %}"
+          alt="Portrait photo"
+          loading="eager"
+          decoding="async"
+        >
+      </div>
+
+      <div class="contact-intro reveal">
+        <p class="eyebrow">// contact</p>
+        <h1 class="section-title">Let's talk.</h1>
+
+        <!--
+          TODO(Amir): add your contact form, info, and links here.
+          Phone + email already live in the footer below — feel free to
+          repeat them here too once the form/fields are ready.
+        -->
+        <div class="placeholder-block">
+          <p class="placeholder-text">
+            Contact details and form go here — phone, email, Instagram,
+            and whatever else you'd like a client to use to reach you.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Panah Studios — Custom Django Web Development{% endblock %}
+
+{% block content %}
+
+  <!-- ============================================= -->
+  <!-- HERO — full-bleed photo, overlaid title        -->
+  <!-- ============================================= -->
+  <section class="hero">
+    <img
+      class="hero-img"
+      src="{% static 'images/hero-laptop.jpg' %}"
+      alt="Django project open in an editor, terminal running the dev server"
+      loading="eager"
+      fetchpriority="high"
+      decoding="async"
+    >
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">welcome to</p>
+      <h1 class="hero-title">Panah Studios</h1>
+
+      <!-- TODO(Amir): drop your one-line value statement here, e.g.
+           "Custom Django websites, built for speed, security, and growth." -->
+      <p class="hero-sub placeholder-text">— your tagline goes here —</p>
+    </div>
+
+    <button class="scroll-cue" id="scroll-cue" aria-label="Scroll to next section" type="button">
+      <span></span>
+    </button>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- DESCRIPTION — placeholder, fill in later       -->
+  <!-- ============================================= -->
+  <section class="section section-light reveal" id="about">
+    <div class="section-inner">
+      <p class="eyebrow">// introduction</p>
+
+      <!--
+        TODO(Amir): replace the block below with your real description.
+        Suggested content: who you are, what you build, who it's for,
+        and your goal (freelance → studio → software company).
+      -->
+      <div class="placeholder-block">
+        <p class="placeholder-text">
+          Your introduction goes here — who you are, what you build, and why
+          someone should hire Panah Studios instead of a template site.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- DJANGO VS WORDPRESS                            -->
+  <!-- ============================================= -->
+  <section class="section section-dark reveal" id="django-vs-wordpress">
+    <div class="section-inner">
+      <p class="eyebrow">// why django</p>
+      <h2 class="section-title">Django <span class="vs">vs.</span> WordPress</h2>
+      <p class="section-intro">
+        Two ways to build a website. One is assembled from plugins.
+        The other is written for exactly what you need.
+      </p>
+
+      <div class="compare-table" role="table" aria-label="Django compared to WordPress">
+        <div class="compare-row compare-head" role="row">
+          <div class="compare-cell" role="columnheader">// criteria</div>
+          <div class="compare-cell compare-django" role="columnheader">Django</div>
+          <div class="compare-cell compare-wp" role="columnheader">WordPress</div>
+        </div>
+
+        <!--
+          TODO(Amir): wire this up to your ComparisonPoint model and
+          loop with a for-loop over comparison_points once the view
+          passes them in. Sample rows below show the pattern.
+        -->
+        <div class="compare-row" role="row">
+          <div class="compare-cell compare-label" role="cell">Speed</div>
+          <div class="compare-cell compare-django" role="cell">Lean, server-rendered, no plugin bloat</div>
+          <div class="compare-cell compare-wp" role="cell">Slows down as plugins pile up</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div class="compare-cell compare-label" role="cell">Security</div>
+          <div class="compare-cell compare-django" role="cell">Built-in protections, no plugin vulnerabilities</div>
+          <div class="compare-cell compare-wp" role="cell">Common target — most exploits come from plugins</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div class="compare-cell compare-label" role="cell">Ownership</div>
+          <div class="compare-cell compare-django" role="cell">Code is yours, built exactly to spec</div>
+          <div class="compare-cell compare-wp" role="cell">Locked into themes &amp; plugin ecosystems</div>
+        </div>
+        <div class="compare-row" role="row">
+          <div class="compare-cell compare-label" role="cell">Scalability</div>
+          <div class="compare-cell compare-django" role="cell">Grows cleanly as features &amp; traffic grow</div>
+          <div class="compare-cell compare-wp" role="cell">Patched together, harder to scale</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- LIBRARY — placeholder, projects added later    -->
+  <!-- ============================================= -->
+  <section class="section section-light reveal" id="work">
+    <div class="section-inner">
+      <p class="eyebrow">// the work</p>
+      <h2 class="section-title">Projects</h2>
+      <p class="section-intro placeholder-text">
+        Your project library goes here — cards with screenshots, titles,
+        links, and short write-ups for each site you've built.
+      </p>
+
+      <!--
+        TODO(Amir): replace these ghost cards with a loop over your
+        Project queryset, e.g. a for-loop over featured_projects
+      -->
+      <div class="project-grid">
+        <div class="project-card project-card--ghost">
+          <div class="project-thumb-placeholder"></div>
+          <p class="project-ghost-label">// project slot 01</p>
+        </div>
+        <div class="project-card project-card--ghost">
+          <div class="project-thumb-placeholder"></div>
+          <p class="project-ghost-label">// project slot 02</p>
+        </div>
+        <div class="project-card project-card--ghost">
+          <div class="project-thumb-placeholder"></div>
+          <p class="project-ghost-label">// project slot 03</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================= -->
+  <!-- CONTACT CTA                                    -->
+  <!-- ============================================= -->
+  <section class="section section-dark cta-section reveal">
+    <div class="section-inner cta-inner">
+      <p class="eyebrow">// ready when you are</p>
+      <h2 class="section-title">Let's build something solid.</h2>
+      <a href="/contact/" class="btn-primary">
+        Contact us <span class="btn-arrow">&rarr;</span>
+      </a>
+    </div>
+  </section>
+
+{% endblock %}
