@@ -128,6 +128,25 @@ a { color: inherit; text-decoration: none; }
   font-weight: 500;
 }
 
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 28px;
+  max-height: 28px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
 .logo-mark { color: var(--gold); }
 
 .primary-nav {
@@ -556,6 +575,10 @@ a { color: inherit; text-decoration: none; }
   margin: 0 0 0.4rem;
 }
 
+.logo img {
+  height: clamp(28px, 3vw, 45px);
+  width: auto;
+}
 .footer-tagline {
   font-family: var(--font-mono);
   font-size: 0.8rem;
