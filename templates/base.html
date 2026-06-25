@@ -1,51 +1,54 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="fa" dir="rtl" class="no-js">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}استودیو پناه | Panah Studios{% endblock %}</title>
-  <meta name="description" content="{% block meta_description %}وب‌سایت شما فقط یک حضور آنلاین نیست؛ بلکه ابزار اصلی رشد و جذب مشتری است. ما با ترکیب طراحی خلاق، کدنویسی استاندارد و تمرکز بر تجربه کاربری، وب‌سایت‌هایی سریع، امن و شخصی سازی شده خلق می‌کنیم. اگر به دنبال یک حضور حرفه‌ای و متمایز هستید، ما همراه شما هستیم.{% endblock %}">
+  <meta name="description"
+    content="{% block meta_description %}وب‌سایت شما فقط یک حضور آنلاین نیست؛ بلکه ابزار اصلی رشد و جذب مشتری است. ما با ترکیب طراحی خلاق، کدنویسی استاندارد و تمرکز بر تجربه کاربری، وب‌سایت‌هایی سریع، امن و شخصی سازی شده خلق می‌کنیم. اگر به دنبال یک حضور حرفه‌ای و متمایز هستید، ما همراه شما هستیم.{% endblock %}">
 
   <!-- Preconnect for font performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Vazirmatn:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Vazirmatn:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
 
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
   {% block extra_css %}{% endblock %}
 </head>
+
 <body>
 
   <a class="skip-link" href="#main">رفتن به محتوای اصلی</a>
 
-{% load static %}
+  {% load static %}
 
-<header class="site-header" id="site-header">
-  <div class="header-inner">
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
 
-    <!-- Logo -->
-    <a href="/" class="logo" aria-label="پناه استودیو — صفحه اصلی">
-      <img src="{% static 'images/logo.png' %}" alt="لوگوی پناه استودیو" class="logo-img">
-    </a>
+      <!-- Logo -->
+      <a href="/" class="logo" aria-label="پناه استودیو — صفحه اصلی">
+        <img src="{% static 'images/logo.png' %}" alt="لوگوی پناه استودیو" class="logo-img">
+      </a>
 
-    <!-- Mobile menu button -->
-    <button class="nav-toggle" id="nav-toggle"
-      aria-label="باز کردن منو"
-      aria-expanded="false"
-      aria-controls="primary-nav">
-      <span></span><span></span><span></span>
-    </button>
+      <!-- Mobile menu button -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="باز کردن منو" aria-expanded="false"
+        aria-controls="primary-nav">
+        <span></span><span></span><span></span>
+      </button>
 
-    <!-- Navigation -->
-    <nav class="primary-nav" id="primary-nav" aria-label="ناوبری اصلی">
-      <a href="/#work" class="nav-link"><span class="nav-bracket"></span>نمونه کارها</a>
-      <a href="/#django-vs-wordpress" class="nav-link">؟ django چرا</a>
-      <a href="/contact/" class="nav-link nav-cta">ارتباط با ما</a>
-    </nav>
+      <!-- Navigation -->
+      <nav class="primary-nav" id="primary-nav" aria-label="ناوبری اصلی">
+        <a href="/#work" class="nav-link"><span class="nav-bracket"></span>نمونه کارها</a>
+        <a href="/#django-vs-wordpress" class="nav-link">تفاوت کار ما</a>
+        <a href="/contact/" class="nav-link nav-cta">ارتباط با ما</a>
+      </nav>
 
-  </div>
-</header>
+    </div>
+  </header>
 
   <main id="main">
     {% block content %}{% endblock %}
@@ -62,7 +65,7 @@
       <div class="footer-contact">
         <p class="footer-label">// در ارتباط باشید</p>
         <a class="footer-link" href="tel:09113914457">0911&nbsp;391&nbsp;4457</a>
-        <a class="footer-link" href="mailto:nobody76911@gmail.com">nobody76911@gmail.com</a>
+        <a class="footer-link" href="mailto:nobody76911@gmail.com">panah.studios@gmail.com</a>
         <!-- TODO(Amir): add Instagram handle here when ready, e.g.
         <a class="footer-link" href="https://instagram.com/yourhandle" target="_blank" rel="noopener">@yourhandle</a>
         -->
@@ -70,9 +73,12 @@
 
       <div class="footer-nav">
         <p class="footer-label">// نقشه سایت</p>
-        <a class="footer-link" href="/#work">نمونه‌کارها</a>
-        <a class="footer-link" href="/#django-vs-wordpress">چرا جنگو</a>
-        <a class="footer-link" href="/contact/">ارتباط با ما</a>
+        <a class="footer-link" href="/#about">معرفی</a>
+        <a class="footer-link" href="/#django-vs-wordpress">جنگو چیست و چرا مناسب ترین گزینه است ؟ </a>
+        <a class="footer-link" href="/#why-us">چرا ما را انتخاب کنید ؟</a>
+        <a class="footer-link" href="/#work">نگاهی به کارفرماها و مشتریان قبلی</a>
+
+        <a class="footer-link" href="/contact/"> ثبت سفارش </a>
       </div>
 
     </div>
@@ -85,4 +91,5 @@
   <script src="{% static 'js/main.js' %}" defer></script>
   {% block extra_js %}{% endblock %}
 </body>
+
 </html>
