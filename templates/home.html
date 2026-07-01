@@ -9,7 +9,7 @@
 <!-- HERO -->
 <!-- ============================================= -->
 <section class="hero">
-  <img class="hero-img" src="{% static 'images/hero-laptop.jpg' %}"
+  <img class="hero-img" src="{% static 'images/hero-laptop.png' %}"
     alt="پروژه جنگو باز شده در ادیتور، سرور توسعه در حال اجرا در ترمینال" loading="eager" fetchpriority="high"
     decoding="async">
   <div class="hero-overlay"></div>
@@ -149,7 +149,7 @@
     <div class="project-grid">
       {% for project in projects %}
       <div class="project-card project-card--ghost">
-        <div class="project-thumb-placeholder"></div>
+        <img src="{{ project.image.url }}" alt="{{ data.title }}">
         <p class="project-ghost-label">{{project.title}}</p>
       </div>
     {% endfor %}

@@ -20,13 +20,12 @@
   --ink: #0d1820;      /* deepest background — footer / header overlay (was near-black brown) */
   --oat: #f3ead9;      /* warm cream — main text-on-dark + light surface bg */
   --oat-dim: #d9c9ab;  /* warm beige — secondary text-on-dark */
-  --surface: #e3d6bc;  /* deeper warm beige — background for "box" sections (about, why-us) */
 
   /* accents */
   --gold: #5f9e7d;        /* trust green — links, buttons, CTAs (was yellow-gold) */
   --gold-bright: #7cc29c; /* brighter green — hover state (was bright gold) */
   --sage: #4f8a68;        /* deeper trust green — eyebrow/label text */
-  --rust: #2c5468;        /* darker muted blue — was rust/brown */
+  --rust: #4a7a96;        /* muted secondary blue — was rust/brown */
 
   /* warm-neutral text, dedicated to light/cream surfaces */
   --soft-brown: #4a3a28;       /* primary text colour on cream surfaces */
@@ -35,6 +34,7 @@
   /* semantic */
   --bg: var(--walnut);
   --bg-deep: var(--ink);
+  --surface: var(--oat);
   --text-on-dark: var(--oat);
   --text-on-light: var(--soft-brown);
   --muted-on-dark: #a99b81;
@@ -358,7 +358,7 @@ a { color: inherit; text-decoration: none; }
 
 .section-light {
   background: var(--surface);
-  color: var(--bg);
+  color: var(--text-on-light);
 }
 
 .section-inner {
@@ -483,8 +483,8 @@ a { color: inherit; text-decoration: none; }
   aspect-ratio: 4 / 3;
   background: repeating-linear-gradient(
     135deg,
-    rgba(44, 84, 104, 0.08),
-    rgba(44, 84, 104, 0.08) 10px,
+    rgba(74, 122, 150, 0.08),
+    rgba(74, 122, 150, 0.08) 10px,
     transparent 10px,
     transparent 20px
   );

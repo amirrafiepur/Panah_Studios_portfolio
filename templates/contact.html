@@ -21,6 +21,11 @@
       <div class="contact-intro reveal">
         <p class="eyebrow">// تماس</p>
         <h1 class="section-title">بیایید گفتگو کنیم.</h1>
+        <form action="{% url 'contact' %}" method="POST">
+          {% csrf_token %}
+          {{form}}
+          <button type="submit">submit</button>
+        </form>
 
         <!--
           TODO(Amir): add your contact form, info, and links here.
